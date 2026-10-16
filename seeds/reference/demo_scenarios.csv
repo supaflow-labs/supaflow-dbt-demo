@@ -1,0 +1,16 @@
+CUSTOMER_KEY,SCENARIO,EXPECTED_ELIGIBLE,EXPECTED_REASON,AS_OF_DATE
+CUST-001,eligible,true,eligible,2026-10-15
+CUST-002,overdue_invoice,false,overdue_invoice,2026-10-15
+CUST-003,unsubscribed,false,unsubscribed,2026-10-15
+CUST-004,stale_engagement,false,stale_engagement,2026-10-15
+CUST-005,no_closed_won,false,no_closed_won,2026-10-15
+CUST-006,missing_finance_match,false,missing_finance_match,2026-10-15
+CUST-007,held_subscriber,false,held_subscriber,2026-10-15
+CUST-008,no_engagement,false,no_engagement,2026-10-15
+CUST-009,current_unpaid_invoice,true,eligible,2026-10-15
+CUST-010,inactive_finance_customer,false,inactive_finance_customer,2026-10-15
+CUST-011,unsubscribe_event,false,unsubscribe_event,2026-10-15
+CUST-012,closed_lost,false,closed_lost,2026-10-15
+CUST-013,unknown_subscription_status,false,unknown_subscription_status,2026-10-15
+CUST-014,complaint_event,false,complaint_event,2026-10-15
+CUST-015,already_has_expansion_product,false,already_has_expansion_product,2026-10-15

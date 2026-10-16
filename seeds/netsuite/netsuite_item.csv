@@ -1,0 +1,4 @@
+ID,ITEMID,DISPLAYNAME,ITEMTYPE,ISINACTIVE
+501,CORE-ANNUAL,Core Platform Annual,Service,F
+502,SUPPORT-ANNUAL,Support Annual,Service,F
+503,ANALYTICS-ADDON,Analytics Expansion,Service,F
