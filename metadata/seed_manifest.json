@@ -1,0 +1,76 @@
+{
+  "synthetic_only": true,
+  "as_of_date": "2026-10-15",
+  "tables": [
+    {
+      "seed": "salesforce_account",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_SALESFORCE.ACCOUNT",
+      "rows": 15,
+      "columns": 75,
+      "sha256": "11b314870fff8a6d6409c582765d7e666a03f7d4798850f54f026eb920ebcf70"
+    },
+    {
+      "seed": "salesforce_opportunity",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_SALESFORCE.OPPORTUNITY",
+      "rows": 17,
+      "columns": 51,
+      "sha256": "49384ff9ce6ba31bd6c914c4cf36f990b68890630496000bb24ca877c0ba566e"
+    },
+    {
+      "seed": "sfmc_subscribers",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_SFMC.SUBSCRIBERS",
+      "rows": 15,
+      "columns": 13,
+      "sha256": "1ecb04ab0eaf53d37814abdf6fb5d772a87bed0de6ae5aa7baaefb1febd7e078"
+    },
+    {
+      "seed": "sfmc_event",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_SFMC.EVENT",
+      "rows": 31,
+      "columns": 32,
+      "sha256": "21e855e190fe84e21f33557eae4566460bb4dc9aab29c281b15f669b15dc22a5"
+    },
+    {
+      "seed": "netsuite_customer",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_NETSUITE.CUSTOMER",
+      "rows": 14,
+      "columns": 7,
+      "sha256": "8555feca23cdb22f0978aa82d9134b1c013ce60018205977d5fc4ab4e4a70f9a"
+    },
+    {
+      "seed": "netsuite_transaction",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_NETSUITE.TRANSACTION",
+      "rows": 27,
+      "columns": 13,
+      "sha256": "2a48cf7b50d207c77cb0588ad67aeb7d12f2d6b5efbcea479b7711e1078361f4"
+    },
+    {
+      "seed": "netsuite_transactionline",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_NETSUITE.TRANSACTIONLINE",
+      "rows": 78,
+      "columns": 8,
+      "sha256": "87b5013ecf69929e7d80786afd95460fc9f60f1d90c253620578e4ebad97fa70"
+    },
+    {
+      "seed": "netsuite_item",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_NETSUITE.ITEM",
+      "rows": 3,
+      "columns": 5,
+      "sha256": "2e6be807d1f85ca0442a63ffc93edd788fdbd12decd8dfe8b476dda6baea3b2d"
+    },
+    {
+      "seed": "customer_identity",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_REFERENCE.CUSTOMER_IDENTITY",
+      "rows": 15,
+      "columns": 4,
+      "sha256": "b9e1af2f49eecb37b0979154b0c8a9d0df8b53fefd9b92bd490cf866d1bfb0f1"
+    },
+    {
+      "seed": "demo_scenarios",
+      "relation": "SUPA_DB.SUPAFLOW_DEMO_REFERENCE.DEMO_SCENARIOS",
+      "rows": 15,
+      "columns": 5,
+      "sha256": "1ecacf4fddcd489416538bb05dbd5181e62dc86af28602f5999d8a55301a5df0"
+    }
+  ]
+}

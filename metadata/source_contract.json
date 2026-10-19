@@ -1,0 +1,1358 @@
+{
+  "database": "SUPA_DB",
+  "target_schema": "SUPAFLOW_DEMO",
+  "synthetic_only": true,
+  "as_of_date": "2026-10-15",
+  "tables": [
+    {
+      "source": "salesforce",
+      "table": "ACCOUNT",
+      "seed": "salesforce_account",
+      "schema_suffix": "SALESFORCE",
+      "provenance": "Live SUPA_DB.SALESFORCE information_schema.columns; metadata only",
+      "verification": "live_destination",
+      "columns": [
+        {
+          "name": "ACCOUNTNUMBER",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ACCOUNTSOURCE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ACTIVE__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ANNUALREVENUE",
+          "snowflake_type": "NUMBER(18,0)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGCITY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGCOUNTRY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGCOUNTRYCODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGGEOCODEACCURACY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGLATITUDE",
+          "snowflake_type": "NUMBER(18,15)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGLONGITUDE",
+          "snowflake_type": "NUMBER(18,15)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGPOSTALCODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGSTATE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGSTATECODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BILLINGSTREET",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "CLEANSTATUS",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "CREATEDBYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "CREATEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "CUSTOMERPRIORITY__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "DANDBCOMPANYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "DESCRIPTION",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "DUNSNUMBER",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "FAX",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "INDUSTRY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ISDELETED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "JIGSAW",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "JIGSAWCOMPANYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LASTACTIVITYDATE",
+          "snowflake_type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "LASTMODIFIEDBYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LASTMODIFIEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "LASTREFERENCEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "LASTVIEWEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "MASTERRECORDID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NAICSCODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NAICSDESC",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NAME",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NEW_CURRENCY_1__C",
+          "snowflake_type": "NUMBER(18,2)",
+          "nullable": true
+        },
+        {
+          "name": "NEW_FIELD_1__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NUMBEROFEMPLOYEES",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "NUMBEROFLOCATIONS__C",
+          "snowflake_type": "NUMBER(3,0)",
+          "nullable": true
+        },
+        {
+          "name": "OPERATINGHOURSID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "OWNERID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "OWNERSHIP",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "PARENTID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "PHONE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "PHOTOURL",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "RATING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGCITY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGCOUNTRY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGCOUNTRYCODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGGEOCODEACCURACY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGLATITUDE",
+          "snowflake_type": "NUMBER(18,15)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGLONGITUDE",
+          "snowflake_type": "NUMBER(18,15)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGPOSTALCODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGSTATE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGSTATECODE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SHIPPINGSTREET",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SIC",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SICDESC",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SITE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SLA__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SLAEXPIRATIONDATE__C",
+          "snowflake_type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "SLASERIALNUMBER__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SYSTEMMODSTAMP",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "TICKERSYMBOL",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "TRADESTYLE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "TYPE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "UPSELLOPPORTUNITY__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "WEBSITE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "YEARSTARTED",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_SYNCED",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_DELETED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_INDEX",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_JOB_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "source": "salesforce",
+      "table": "OPPORTUNITY",
+      "seed": "salesforce_opportunity",
+      "schema_suffix": "SALESFORCE",
+      "provenance": "Live SUPA_DB.SALESFORCE information_schema.columns; metadata only",
+      "verification": "live_destination",
+      "columns": [
+        {
+          "name": "ACCOUNTID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "AMOUNT",
+          "snowflake_type": "NUMBER(18,2)",
+          "nullable": true
+        },
+        {
+          "name": "CAMPAIGNID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "CLOSEDATE",
+          "snowflake_type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "CONTACTID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "CREATEDBYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "CREATEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "CURRENTGENERATORS__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "DELIVERYINSTALLATIONSTATUS__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "DESCRIPTION",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "EXPECTEDREVENUE",
+          "snowflake_type": "NUMBER(18,2)",
+          "nullable": true
+        },
+        {
+          "name": "FISCAL",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "FISCALQUARTER",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "FISCALYEAR",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "FORECASTCATEGORY",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "FORECASTCATEGORYNAME",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "HASOPENACTIVITY",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "HASOPPORTUNITYLINEITEM",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "HASOVERDUETASK",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ISCLOSED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "ISDELETED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "ISPRIVATE",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "ISWON",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "LASTACTIVITYDATE",
+          "snowflake_type": "DATE",
+          "nullable": true
+        },
+        {
+          "name": "LASTAMOUNTCHANGEDHISTORYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LASTCLOSEDATECHANGEDHISTORYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LASTMODIFIEDBYID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LASTMODIFIEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "LASTREFERENCEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "LASTSTAGECHANGEDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "LASTVIEWEDDATE",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "LEADSOURCE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "MAINCOMPETITORS__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NAME",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "NEXTSTEP",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ORDERNUMBER__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "OWNERID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "PRICEBOOK2ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "PROBABILITY",
+          "snowflake_type": "NUMBER(3,0)",
+          "nullable": true
+        },
+        {
+          "name": "PUSHCOUNT",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "STAGENAME",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SYSTEMMODSTAMP",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "TOTALOPPORTUNITYQUANTITY",
+          "snowflake_type": "NUMBER(18,2)",
+          "nullable": true
+        },
+        {
+          "name": "TRACKINGNUMBER__C",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "TYPE",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_SYNCED",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_DELETED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_INDEX",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_JOB_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "source": "sfmc",
+      "table": "SUBSCRIBERS",
+      "seed": "sfmc_subscribers",
+      "schema_suffix": "SFMC",
+      "verification": "live_smoke_destination",
+      "catalog_updated_at": "2026-05-09T01:57:12.108726+00:00",
+      "provenance": "Measured SFMC smoke landing schema; 8 source fields and 5 Supaflow landing fields. Metadata only, no source rows.",
+      "columns": [
+        {
+          "name": "CREATEDDATE",
+          "source_name": "CreatedDate",
+          "canonical_type": "INSTANT",
+          "original_data_type": "INSTANT",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "EMAILADDRESS",
+          "source_name": "EmailAddress",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "EMAILTYPEPREFERENCE",
+          "source_name": "EmailTypePreference",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ID",
+          "source_name": "ID",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "PARTNERKEY",
+          "source_name": "PartnerKey",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "STATUS",
+          "source_name": "Status",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SUBSCRIBERKEY",
+          "source_name": "SubscriberKey",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "UNSUBSCRIBEDDATE",
+          "source_name": "UnsubscribedDate",
+          "canonical_type": "INSTANT",
+          "original_data_type": "INSTANT",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_SYNCED",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_DELETED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_INDEX",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_JOB_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        }
+      ]
+    },
+    {
+      "source": "sfmc",
+      "table": "EVENT",
+      "seed": "sfmc_event",
+      "schema_suffix": "SFMC",
+      "verification": "actual_source_catalog_zero_row_smoke_no_event_destination",
+      "catalog_updated_at": "2026-05-09T01:57:12.108726+00:00",
+      "provenance": "Actual Dev SFMC event catalog (27 fields); smoke exported zero events and did not create EVENT. Canonical-type Snowflake mapping plus 5 standard Supaflow landing fields; no live EVENT physical schema available.",
+      "columns": [
+        {
+          "name": "ACCOUNTID",
+          "source_name": "AccountID",
+          "canonical_type": "LONG",
+          "original_data_type": "int",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "BATCHID",
+          "source_name": "BatchID",
+          "canonical_type": "LONG",
+          "original_data_type": "int",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "BOUNCECATEGORY",
+          "source_name": "BounceCategory",
+          "canonical_type": "STRING",
+          "original_data_type": "nvarchar(50)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BOUNCECATEGORYID",
+          "source_name": "BounceCategoryID",
+          "canonical_type": "INT",
+          "original_data_type": "smallint",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "BOUNCESUBCATEGORY",
+          "source_name": "BounceSubcategory",
+          "canonical_type": "STRING",
+          "original_data_type": "nvarchar(50)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BOUNCESUBCATEGORYID",
+          "source_name": "BounceSubcategoryID",
+          "canonical_type": "INT",
+          "original_data_type": "smallint",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "BOUNCETYPE",
+          "source_name": "BounceType",
+          "canonical_type": "STRING",
+          "original_data_type": "nvarchar(50)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "BOUNCETYPEID",
+          "source_name": "BounceTypeID",
+          "canonical_type": "INT",
+          "original_data_type": "smallint",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "DOMAIN",
+          "source_name": "Domain",
+          "canonical_type": "STRING",
+          "original_data_type": "varchar(128)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "EVENTDATE",
+          "source_name": "EventDate",
+          "canonical_type": "INSTANT",
+          "original_data_type": "datetime",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true
+        },
+        {
+          "name": "EVENT_TYPE",
+          "source_name": "event_type",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ID",
+          "source_name": "id",
+          "canonical_type": "STRING",
+          "original_data_type": "STRING",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "ISFALSEBOUNCE",
+          "source_name": "IsFalseBounce",
+          "canonical_type": "BOOLEAN",
+          "original_data_type": "bit",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "ISUNIQUE",
+          "source_name": "IsUnique",
+          "canonical_type": "BOOLEAN",
+          "original_data_type": "bit",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true
+        },
+        {
+          "name": "JOBID",
+          "source_name": "JobID",
+          "canonical_type": "LONG",
+          "original_data_type": "int",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "LINKCONTENT",
+          "source_name": "LinkContent",
+          "canonical_type": "STRING",
+          "original_data_type": "varchar(max)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LINKNAME",
+          "source_name": "LinkName",
+          "canonical_type": "STRING",
+          "original_data_type": "varchar(1024)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "LISTID",
+          "source_name": "ListID",
+          "canonical_type": "LONG",
+          "original_data_type": "int",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "OYBACCOUNTID",
+          "source_name": "OYBAccountID",
+          "canonical_type": "LONG",
+          "original_data_type": "int",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "SMTPBOUNCEREASON",
+          "source_name": "SMTPBounceReason",
+          "canonical_type": "STRING",
+          "original_data_type": "nvarchar(max)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SMTPCODE",
+          "source_name": "SMTPCode",
+          "canonical_type": "INT",
+          "original_data_type": "smallint",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "SMTPMESSAGE",
+          "source_name": "SMTPMessage",
+          "canonical_type": "STRING",
+          "original_data_type": "nvarchar(max)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "SUBSCRIBERID",
+          "source_name": "SubscriberID",
+          "canonical_type": "LONG",
+          "original_data_type": "int",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "SUBSCRIBERKEY",
+          "source_name": "SubscriberKey",
+          "canonical_type": "STRING",
+          "original_data_type": "nvarchar(254)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "TRIGGEREDSENDCUSTOMERKEY",
+          "source_name": "TriggeredSendCustomerKey",
+          "canonical_type": "STRING",
+          "original_data_type": "varchar(36)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "TRIGGERERSENDDEFINITIONOBJECTID",
+          "source_name": "TriggererSendDefinitionObjectID",
+          "canonical_type": "STRING",
+          "original_data_type": "varchar(36)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "URL",
+          "source_name": "URL",
+          "canonical_type": "STRING",
+          "original_data_type": "varchar(900)",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true
+        },
+        {
+          "name": "_SUPA_SYNCED",
+          "snowflake_type": "TIMESTAMP_TZ(9)",
+          "nullable": true,
+          "provenance": "Supaflow landing metadata; synthetic seed leaves it null"
+        },
+        {
+          "name": "_SUPA_DELETED",
+          "snowflake_type": "BOOLEAN",
+          "nullable": true,
+          "provenance": "Supaflow landing metadata; synthetic seed leaves it null"
+        },
+        {
+          "name": "_SUPA_INDEX",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "provenance": "Supaflow landing metadata; synthetic seed leaves it null"
+        },
+        {
+          "name": "_SUPA_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true,
+          "provenance": "Supaflow landing metadata; synthetic seed leaves it null"
+        },
+        {
+          "name": "_SUPA_JOB_ID",
+          "snowflake_type": "VARCHAR(16777216)",
+          "nullable": true,
+          "provenance": "Supaflow landing metadata; synthetic seed leaves it null"
+        }
+      ]
+    },
+    {
+      "source": "netsuite",
+      "table": "CUSTOMER",
+      "seed": "netsuite_customer",
+      "schema_suffix": "NETSUITE",
+      "verification": "documented_standard_subset_not_live_account_verified",
+      "provenance": "NetSuite2.com standard field subset; account connection expired; T/F checkbox encoding is a demo convention to verify on reconnection.",
+      "columns": [
+        {
+          "name": "ID",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ENTITYID",
+          "snowflake_type": "VARCHAR(256)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "COMPANYNAME",
+          "snowflake_type": "VARCHAR(256)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "EMAIL",
+          "snowflake_type": "VARCHAR(256)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ISINACTIVE",
+          "snowflake_type": "VARCHAR(1)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "CURRENCY",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "LASTMODIFIEDDATE",
+          "snowflake_type": "TIMESTAMP_NTZ(9)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        }
+      ]
+    },
+    {
+      "source": "netsuite",
+      "table": "TRANSACTION",
+      "seed": "netsuite_transaction",
+      "schema_suffix": "NETSUITE",
+      "verification": "documented_standard_subset_not_live_account_verified",
+      "provenance": "NetSuite2.com standard field subset; account connection expired; T/F checkbox encoding is a demo convention to verify on reconnection.",
+      "columns": [
+        {
+          "name": "ID",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ENTITY",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "TRANID",
+          "snowflake_type": "VARCHAR(256)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "TYPE",
+          "snowflake_type": "VARCHAR(32)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "STATUS",
+          "snowflake_type": "VARCHAR(32)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "TRANDATE",
+          "snowflake_type": "DATE",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "DUEDATE",
+          "snowflake_type": "DATE",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "CURRENCY",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "FOREIGNTOTAL",
+          "snowflake_type": "NUMBER(38,2)",
+          "nullable": true,
+          "field_provenance": "Oracle Analytics Browser 2020.1, Connect-supported field",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "FOREIGNAMOUNTPAID",
+          "snowflake_type": "NUMBER(38,2)",
+          "nullable": true,
+          "field_provenance": "Oracle Analytics Browser 2020.1, Connect-supported field",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "FOREIGNAMOUNTUNPAID",
+          "snowflake_type": "NUMBER(38,2)",
+          "nullable": true,
+          "field_provenance": "Oracle Analytics Browser 2020.1, Connect-supported field",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "VOIDED",
+          "snowflake_type": "VARCHAR(1)",
+          "nullable": true,
+          "field_provenance": "Oracle Analytics Browser 2020.1, Connect-supported field",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "LASTMODIFIEDDATE",
+          "snowflake_type": "TIMESTAMP_NTZ(9)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        }
+      ]
+    },
+    {
+      "source": "netsuite",
+      "table": "TRANSACTIONLINE",
+      "seed": "netsuite_transactionline",
+      "schema_suffix": "NETSUITE",
+      "verification": "documented_standard_subset_not_live_account_verified",
+      "provenance": "NetSuite2.com standard field subset; account connection expired; T/F checkbox encoding is a demo convention to verify on reconnection.",
+      "columns": [
+        {
+          "name": "ID",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "TRANSACTION",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "UNIQUEKEY",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ITEM",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "MAINLINE",
+          "snowflake_type": "VARCHAR(1)",
+          "nullable": true,
+          "field_provenance": "Oracle Analytics Browser 2020.1, Connect-supported field",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "TAXLINE",
+          "snowflake_type": "VARCHAR(1)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "QUANTITY",
+          "snowflake_type": "NUMBER(38,4)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "NETAMOUNT",
+          "snowflake_type": "NUMBER(38,2)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        }
+      ]
+    },
+    {
+      "source": "netsuite",
+      "table": "ITEM",
+      "seed": "netsuite_item",
+      "schema_suffix": "NETSUITE",
+      "verification": "documented_standard_subset_not_live_account_verified",
+      "provenance": "NetSuite2.com standard field subset; account connection expired; T/F checkbox encoding is a demo convention to verify on reconnection.",
+      "columns": [
+        {
+          "name": "ID",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ITEMID",
+          "snowflake_type": "VARCHAR(256)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "DISPLAYNAME",
+          "snowflake_type": "VARCHAR(256)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ITEMTYPE",
+          "snowflake_type": "VARCHAR(32)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        },
+        {
+          "name": "ISINACTIVE",
+          "snowflake_type": "VARCHAR(1)",
+          "nullable": true,
+          "field_provenance": "Oracle NetSuite2 mapping (updated 2026-06-19)",
+          "type_provenance": "Demo warehouse mapping; not measured from expired account. Numeric precision and text lengths are explicit demo choices."
+        }
+      ]
+    },
+    {
+      "source": "reference",
+      "table": "CUSTOMER_IDENTITY",
+      "seed": "customer_identity",
+      "schema_suffix": "REFERENCE",
+      "verification": "synthetic_demo_reference",
+      "provenance": "Demo-only reference table, not a vendor object.",
+      "columns": [
+        {
+          "name": "CUSTOMER_KEY",
+          "snowflake_type": "VARCHAR(32)",
+          "nullable": false
+        },
+        {
+          "name": "SALESFORCE_ACCOUNT_ID",
+          "snowflake_type": "VARCHAR(18)",
+          "nullable": false
+        },
+        {
+          "name": "NETSUITE_CUSTOMER_ID",
+          "snowflake_type": "NUMBER(38,0)",
+          "nullable": true
+        },
+        {
+          "name": "SFMC_SUBSCRIBER_KEY",
+          "snowflake_type": "VARCHAR(254)",
+          "nullable": false
+        }
+      ]
+    },
+    {
+      "source": "reference",
+      "table": "DEMO_SCENARIOS",
+      "seed": "demo_scenarios",
+      "schema_suffix": "REFERENCE",
+      "verification": "synthetic_demo_reference",
+      "provenance": "Demo-only reference table, not a vendor object.",
+      "columns": [
+        {
+          "name": "CUSTOMER_KEY",
+          "snowflake_type": "VARCHAR(32)",
+          "nullable": false
+        },
+        {
+          "name": "SCENARIO",
+          "snowflake_type": "VARCHAR(128)",
+          "nullable": false
+        },
+        {
+          "name": "EXPECTED_ELIGIBLE",
+          "snowflake_type": "BOOLEAN",
+          "nullable": false
+        },
+        {
+          "name": "EXPECTED_REASON",
+          "snowflake_type": "VARCHAR(128)",
+          "nullable": false
+        },
+        {
+          "name": "AS_OF_DATE",
+          "snowflake_type": "DATE",
+          "nullable": false
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "oracle_mapping": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/article_0822031101.html",
+    "oracle_connect_metadata": "https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_4407755805.html",
+    "oracle_customer_archive": "https://www.netsuite.com/help/helpcenter/en_US/srbrowser/Browser2020_1/analytics/record/customer.html",
+    "oracle_transaction_archive": "https://www.netsuite.com/help/helpcenter/en_US/srbrowser/Browser2020_1/analytics/record/transaction.html",
+    "oracle_transactionline_archive": "https://www.netsuite.com/help/helpcenter/en_US/srbrowser/Browser2020_1/analytics/record/transactionLine.html"
+  }
+}

@@ -1,0 +1,15 @@
+ID,ENTITYID,COMPANYNAME,EMAIL,ISINACTIVE,CURRENCY,LASTMODIFIEDDATE
+1001,DEMO-001,Northstar Demo Labs,contact001@example.com,F,1,2026-10-15 12:00:00
+1002,DEMO-002,Cedar Demo Manufacturing,contact002@example.com,F,1,2026-10-15 12:00:00
+1003,DEMO-003,Harbor Demo Analytics,contact003@example.com,F,1,2026-10-15 12:00:00
+1004,DEMO-004,Summit Demo Systems,contact004@example.com,F,1,2026-10-15 12:00:00
+1005,DEMO-005,Juniper Demo Works,contact005@example.com,F,1,2026-10-15 12:00:00
+1007,DEMO-007,Willow Demo Software,contact007@example.com,F,1,2026-10-15 12:00:00
+1008,DEMO-008,Beacon Demo Logistics,contact008@example.com,F,1,2026-10-15 12:00:00
+1009,DEMO-009,Orchard Demo Industries,contact009@example.com,F,1,2026-10-15 12:00:00
+1010,DEMO-010,Pine Demo Networks,contact010@example.com,T,1,2026-10-15 12:00:00
+1011,DEMO-011,River Demo Research,contact011@example.com,F,1,2026-10-15 12:00:00
+1012,DEMO-012,Aspen Demo Ventures,contact012@example.com,F,1,2026-10-15 12:00:00
+1013,DEMO-013,Elm Demo Technologies,contact013@example.com,F,1,2026-10-15 12:00:00
+1014,DEMO-014,Cobalt Demo Studio,contact014@example.com,F,1,2026-10-15 12:00:00
+1015,DEMO-015,Maple Demo Partners,contact015@example.com,F,1,2026-10-15 12:00:00

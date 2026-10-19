@@ -1,0 +1,12 @@
+supaflow_customer_demo:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "{{ env_var('DEMO_SNOWFLAKE_ACCOUNT') }}"
+      user: "{{ env_var('DEMO_SNOWFLAKE_USER') }}"
+      password: "{{ env_var('DEMO_SNOWFLAKE_PASSWORD') }}"
+      warehouse: "{{ env_var('DEMO_SNOWFLAKE_WAREHOUSE') }}"
+      database: SUPA_DB
+      schema: SUPAFLOW_DEMO
+      threads: 2

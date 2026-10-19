@@ -1,0 +1,131 @@
+version: 2
+seeds:
+- name: salesforce_account
+  description: Live SUPA_DB.SALESFORCE information_schema.columns; metadata only
+  columns:
+  - name: ID
+    data_tests:
+    - not_null
+    - unique
+- name: salesforce_opportunity
+  description: Live SUPA_DB.SALESFORCE information_schema.columns; metadata only
+  columns:
+  - name: ID
+    data_tests:
+    - not_null
+    - unique
+  - name: ACCOUNTID
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('salesforce_account')
+          field: ID
+- name: sfmc_subscribers
+  description: Measured SFMC smoke landing schema; 8 source fields and 5 Supaflow
+    landing fields. Metadata only, no source rows.
+  columns:
+  - name: SUBSCRIBERKEY
+    data_tests:
+    - not_null
+    - unique
+- name: sfmc_event
+  description: Actual Dev SFMC event catalog (27 fields); smoke exported zero events
+    and did not create EVENT. Canonical-type Snowflake mapping plus 5 standard Supaflow
+    landing fields; no live EVENT physical schema available.
+  columns:
+  - name: ID
+    data_tests:
+    - not_null
+    - unique
+  - name: SUBSCRIBERKEY
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('sfmc_subscribers')
+          field: SUBSCRIBERKEY
+- name: netsuite_customer
+  description: NetSuite2.com standard field subset; account connection expired; T/F
+    checkbox encoding is a demo convention to verify on reconnection.
+  columns:
+  - name: ID
+    data_tests:
+    - not_null
+    - unique
+- name: netsuite_transaction
+  description: NetSuite2.com standard field subset; account connection expired; T/F
+    checkbox encoding is a demo convention to verify on reconnection.
+  columns:
+  - name: ID
+    data_tests:
+    - not_null
+    - unique
+  - name: ENTITY
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('netsuite_customer')
+          field: ID
+- name: netsuite_transactionline
+  description: NetSuite2.com standard field subset; account connection expired; T/F
+    checkbox encoding is a demo convention to verify on reconnection.
+  columns:
+  - name: UNIQUEKEY
+    data_tests:
+    - not_null
+    - unique
+  - name: TRANSACTION
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('netsuite_transaction')
+          field: ID
+  - name: ITEM
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('netsuite_item')
+          field: ID
+- name: netsuite_item
+  description: NetSuite2.com standard field subset; account connection expired; T/F
+    checkbox encoding is a demo convention to verify on reconnection.
+  columns:
+  - name: ID
+    data_tests:
+    - not_null
+    - unique
+- name: customer_identity
+  description: Demo-only reference table, not a vendor object.
+  columns:
+  - name: CUSTOMER_KEY
+    data_tests:
+    - not_null
+    - unique
+  - name: SALESFORCE_ACCOUNT_ID
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('salesforce_account')
+          field: ID
+  - name: NETSUITE_CUSTOMER_ID
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('netsuite_customer')
+          field: ID
+  - name: SFMC_SUBSCRIBER_KEY
+    data_tests:
+    - relationships:
+        arguments:
+          to: ref('sfmc_subscribers')
+          field: SUBSCRIBERKEY
+- name: demo_scenarios
+  description: Demo-only reference table, not a vendor object.
+  columns:
+  - name: CUSTOMER_KEY
+    data_tests:
+    - not_null
+    - unique
+    - relationships:
+        arguments:
+          to: ref('customer_identity')
+          field: CUSTOMER_KEY

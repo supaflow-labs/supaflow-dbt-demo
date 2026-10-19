@@ -1,0 +1,163 @@
+version: 2
+sources:
+- name: salesforce
+  database: '{{ target.database }}'
+  schema: '{{ target.schema }}_SALESFORCE'
+  tables:
+  - name: account
+    identifier: ACCOUNT
+    description: Live SUPA_DB.SALESFORCE information_schema.columns; metadata only
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_SALESFORCE') and table_name
+        = 'ACCOUNT'
+  - name: opportunity
+    identifier: OPPORTUNITY
+    description: Live SUPA_DB.SALESFORCE information_schema.columns; metadata only
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_SALESFORCE') and table_name
+        = 'OPPORTUNITY'
+- name: netsuite
+  database: '{{ target.database }}'
+  schema: '{{ target.schema }}_NETSUITE'
+  tables:
+  - name: customer
+    identifier: CUSTOMER
+    description: NetSuite2.com standard field subset; account connection expired;
+      T/F checkbox encoding is a demo convention to verify on reconnection.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_NETSUITE') and table_name
+        = 'CUSTOMER'
+  - name: transaction
+    identifier: TRANSACTION
+    description: NetSuite2.com standard field subset; account connection expired;
+      T/F checkbox encoding is a demo convention to verify on reconnection.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_NETSUITE') and table_name
+        = 'TRANSACTION'
+  - name: transactionline
+    identifier: TRANSACTIONLINE
+    description: NetSuite2.com standard field subset; account connection expired;
+      T/F checkbox encoding is a demo convention to verify on reconnection.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_NETSUITE') and table_name
+        = 'TRANSACTIONLINE'
+  - name: item
+    identifier: ITEM
+    description: NetSuite2.com standard field subset; account connection expired;
+      T/F checkbox encoding is a demo convention to verify on reconnection.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_NETSUITE') and table_name
+        = 'ITEM'
+- name: sfmc
+  database: '{{ target.database }}'
+  schema: '{{ target.schema }}_SFMC'
+  tables:
+  - name: subscribers
+    identifier: SUBSCRIBERS
+    description: Measured SFMC smoke landing schema; 8 source fields and 5 Supaflow
+      landing fields. Metadata only, no source rows.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_SFMC') and table_name = 'SUBSCRIBERS'
+  - name: event
+    identifier: EVENT
+    description: Actual Dev SFMC event catalog (27 fields); smoke exported zero events
+      and did not create EVENT. Canonical-type Snowflake mapping plus 5 standard Supaflow
+      landing fields; no live EVENT physical schema available.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_SFMC') and table_name = 'EVENT'
+- name: reference
+  database: '{{ target.database }}'
+  schema: '{{ target.schema }}_REFERENCE'
+  tables:
+  - name: customer_identity
+    identifier: CUSTOMER_IDENTITY
+    description: Demo-only reference table, not a vendor object.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_REFERENCE') and table_name
+        = 'CUSTOMER_IDENTITY'
+  - name: demo_scenarios
+    identifier: DEMO_SCENARIOS
+    description: Demo-only reference table, not a vendor object.
+    config:
+      freshness:
+        warn_after:
+          count: 24
+          period: hour
+        error_after:
+          count: 48
+          period: hour
+      loaded_at_query: select max(last_altered) from {{ target.database }}.information_schema.tables
+        where table_schema = upper('{{ target.schema }}_REFERENCE') and table_name
+        = 'DEMO_SCENARIOS'

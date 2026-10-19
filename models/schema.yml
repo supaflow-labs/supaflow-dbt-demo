@@ -1,0 +1,117 @@
+version: 2
+models:
+- name: stg_salesforce_accounts
+  description: One row per account_id. Synthetic demo data only.
+  columns:
+  - name: account_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_salesforce_opportunities
+  description: One row per opportunity_id. Synthetic demo data only.
+  columns:
+  - name: opportunity_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_netsuite_customers
+  description: One row per customer_id. Synthetic demo data only.
+  columns:
+  - name: customer_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_netsuite_invoices
+  description: One row per invoice_id. Synthetic demo data only.
+  columns:
+  - name: invoice_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_netsuite_invoice_lines
+  description: One row per invoice_line_id. Synthetic demo data only.
+  columns:
+  - name: invoice_line_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_netsuite_items
+  description: One row per item_id. Synthetic demo data only.
+  columns:
+  - name: item_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_sfmc_subscribers
+  description: One row per subscriber_key. Synthetic demo data only.
+  columns:
+  - name: subscriber_key
+    data_tests:
+    - not_null
+    - unique
+- name: stg_sfmc_events
+  description: One row per event_id. Synthetic demo data only.
+  columns:
+  - name: event_id
+    data_tests:
+    - not_null
+    - unique
+- name: stg_customer_identity
+  description: One row per customer_key. Synthetic demo data only.
+  columns:
+  - name: customer_key
+    data_tests:
+    - not_null
+    - unique
+- name: int_sales_pipeline_summary
+  description: One row per account_id. Synthetic demo data only.
+  columns:
+  - name: account_id
+    data_tests:
+    - not_null
+    - unique
+- name: int_customer_financial_health
+  description: One row per customer_id. Synthetic demo data only.
+  columns:
+  - name: customer_id
+    data_tests:
+    - not_null
+    - unique
+- name: int_customer_purchased_products
+  description: One row per customer_id. Synthetic demo data only.
+  columns:
+  - name: customer_id
+    data_tests:
+    - not_null
+    - unique
+- name: int_customer_engagement
+  description: One row per subscriber_key. Synthetic demo data only.
+  columns:
+  - name: subscriber_key
+    data_tests:
+    - not_null
+    - unique
+- name: customer_360
+  description: One row per explicitly mapped customer, with sales, invoice balances,
+    products, engagement and a deterministic eligibility reason.
+  columns:
+  - name: customer_key
+    data_tests:
+    - not_null
+    - unique
+- name: expansion_audience
+  description: Synthetic analytics expansion audience. No activation or sending is
+    performed.
+  columns:
+  - name: customer_key
+    data_tests:
+    - not_null
+    - unique
+- name: excluded_customers
+  description: One row per excluded customer with the first applicable suppression
+    reason.
+  columns:
+  - name: customer_key
+    data_tests:
+    - not_null
+    - unique
