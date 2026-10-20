@@ -2,8 +2,9 @@
 
 A complete Snowflake dbt project: turn Salesforce sales history, NetSuite invoice
 balances and purchased products, and SFMC engagement into an explainable customer
-expansion audience. All 230 seed records are synthetic. No customer rows are copied,
-no email is sent, and no activation is performed.
+expansion audience. All 230 seed records are synthetic. The optional DEV activation
+writes only the two eligible synthetic customers to an SFMC Data Extension and
+ends with a draft journey and subscriber email preview. No email is sent.
 
 The deterministic fixture has 15 customer scenarios. **Northstar Demo Labs** and
 **Orchard Demo Industries** qualify for the analytics add-on. The other 13 customers
@@ -120,7 +121,7 @@ This repository's local validation establishes that the dbt project itself works
 | Relation | Rows | Purpose |
 | --- | ---: | --- |
 | `CUSTOMER_360` | 15 | Unified customer profile and eligibility decision |
-| `EXPANSION_AUDIENCE` | 2 | Attributes for a future analytics expansion activation |
+| `EXPANSION_AUDIENCE` | 2 | Attributes for the analytics expansion activation |
 | `EXCLUDED_CUSTOMERS` | 13 | First applicable exclusion reason and supporting facts |
 | Subscriber status snapshot | 15 current | Tracks subsequent changes to subscriber status and email |
 
@@ -133,6 +134,63 @@ Orchard has a 2,000 unpaid invoice balance that is **not yet due** and remains
 eligible. Northstar's voided invoice is excluded from financial totals. Maple Demo
 Partners already owns the add-on and is excluded. Invoice paid balances are not
 recognized accounting revenue or payment application history.
+
+## DEV SFMC activation and preview
+
+The demo finishes at **Data Extension → draft journey → subscriber preview**.
+Leave the journey unpublished and unscheduled. Do not activate the journey,
+fire entry events, or use Test Send.
+
+1. After `dbt build`, refresh the dedicated activation projection:
+
+   ```sh
+   snow sql -c dev --database SUPA_DB -f activation/sfmc_expansion_audience.sql
+   ```
+
+   This creates only `SUPA_DB.SUPAFLOW_DEMO.SFMC_EXPANSION_AUDIENCE`, a two-row
+   table derived from `EXPANSION_AUDIENCE`. It transports `AS_OF_DATE` as ISO text
+   to preserve its calendar day across JDBC extraction. Recreate the projection
+   after every dbt rebuild; it is a snapshot, not a dbt-managed model.
+
+2. In the DEV SFMC business unit, create the sendable Data Extension
+   **Supaflow Analytics Expansion Demo**, external key
+   `SUPAFLOW_ANALYTICS_EXPANSION_DEMO`, using
+   [data_extension_fields.json](activation/data_extension_fields.json).
+   `SubscriberKey` is the primary key and relates to SFMC Subscriber Key.
+
+3. Refresh the Snowflake and SFMC catalogs in Supaflow. Create an **activation**
+   project with **SFMC as its destination**. The pipeline source is Snowflake;
+   select only `SUPA_DB.SUPAFLOW_DEMO.SFMC_EXPANSION_AUDIENCE`. Map the 13 source
+   fields to the corresponding DE fields in the JSON file, select merge key
+   `SubscriberKey`, and use MERGE with STRICT error handling. A target selected
+   in an object mapping does not replace the pipeline's destination connection.
+
+4. Run an ordinary sync. Verify the terminal job, zero errors, exactly two SFMC
+   rows, and every mapped value against `EXPANSION_AUDIENCE`. Check both subscriber
+   keys (`demo-contact-001`, `demo-contact-009`), amounts, product and eligibility
+   reason, and `AsOfDate = 2026-10-15`. For `LastClickAt`, normalize SFMC's
+   [CST system time without daylight saving adjustments](https://developer.salesforce.com/docs/marketing/marketing-cloud/guide/working_with_soap_web_service_api.html)
+   to UTC before comparing timestamps.
+
+5. Save [analytics_addon_email.html](activation/analytics_addon_email.html) in
+   Content Builder as **Supaflow Analytics Add-on - Demo Preview**. Use subject
+   `%%CustomerName%%, your next analytics step`. The account-address and
+   profile-center tokens are required for SFMC subscriber preview. Include them
+   in the plain-text version too.
+
+6. Save **Supaflow Analytics Expansion Demo** as a multistep **Draft** journey:
+   Data Extension entry → the new preview email → Exit. Use no re-entry,
+   `EmailAddress` from the entry source, and no schedule. In Content Builder's
+   **Preview and Test → Subscriber Preview**, choose this DE and preview each
+   synthetic customer. Do not use the send controls.
+
+   Journey validation requires a schedule before activation. Leave that schedule
+   unset for this preview-only demo.
+
+The projection SQL, DE field contract and email HTML are reusable artifacts.
+Environment-specific object IDs and dated run evidence belong in the operational
+handoff, not in the project configuration. These steps do not change subscriber
+consent or publish the journey.
 
 ## Warehouse layout and provenance
 

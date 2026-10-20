@@ -1,0 +1,15 @@
+[
+  {"source":"SUBSCRIBER_KEY","name":"SubscriberKey","type":"Text","length":254,"required":true,"primary_key":true},
+  {"source":"CUSTOMER_KEY","name":"CustomerKey","type":"Text","length":32,"required":true},
+  {"source":"CUSTOMER_NAME","name":"CustomerName","type":"Text","length":256},
+  {"source":"EMAIL_ADDRESS","name":"EmailAddress","type":"EmailAddress","length":254,"required":true},
+  {"source":"SALESFORCE_ACCOUNT_ID","name":"SalesforceAccountId","type":"Text","length":18},
+  {"source":"NETSUITE_CUSTOMER_ID","name":"NetSuiteCustomerId","type":"Number"},
+  {"source":"PAID_INVOICE_AMOUNT","name":"PaidInvoiceAmount","type":"Decimal","length":18,"scale":2},
+  {"source":"OVERDUE_INVOICE_AMOUNT","name":"OverdueInvoiceAmount","type":"Decimal","length":18,"scale":2},
+  {"source":"PURCHASED_PRODUCTS","name":"PurchasedProducts","type":"Text","length":500},
+  {"source":"LAST_CLICK_AT","name":"LastClickAt","type":"Date"},
+  {"source":"RECOMMENDED_PRODUCT","name":"RecommendedProduct","type":"Text","length":64},
+  {"source":"AUDIENCE_REASON","name":"AudienceReason","type":"Text","length":256},
+  {"source":"AS_OF_DATE","name":"AsOfDate","type":"Date"}
+]
