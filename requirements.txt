@@ -1,3 +1,7 @@
-dbt-core==1.12.0
-dbt-snowflake==1.12.0
+dbt-core==1.12.6
+dbt-snowflake==1.12.4
 PyYAML>=6.0.2,<7
+# Security floors for transitive dependencies.
+certifi>=2026.10.19
+filelock>=4.2.1
+sqlparse>=0.6.0,<0.7
